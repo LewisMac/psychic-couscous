@@ -7,6 +7,8 @@ public enum WeaponType {
 
     ROCK,
     PAPER,
-    SCISSORS
+    SCISSORS,
+    LIZARD,
+    SPOCK
 
 }

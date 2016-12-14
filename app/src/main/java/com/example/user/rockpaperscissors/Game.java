@@ -15,6 +15,8 @@ public class Game extends AppCompatActivity {
     Button PaperButton;
     Button RockButton;
     Button ScissorsButton;
+    Button LizardButton;
+    Button SpockButton;
     TextView answerText;
 
     @Override
@@ -25,6 +27,8 @@ public class Game extends AppCompatActivity {
         PaperButton = (Button)findViewById(R.id.button_paper);
         RockButton = (Button)findViewById(R.id.button_rock);
         ScissorsButton = (Button)findViewById(R.id.button_scissors);
+        LizardButton = (Button)findViewById(R.id.button_lizard);
+        SpockButton = (Button)findViewById(R.id.button_spock);
         answerText = (TextView)findViewById(R.id.answer_text);
 
         PaperButton.setOnClickListener(new View.OnClickListener() {
@@ -32,7 +36,6 @@ public class Game extends AppCompatActivity {
                 RockPaperScissors game = new RockPaperScissors();
                 WeaponType computerChoice = game.computerChoice();
                 String result = game.compareWeapons(WeaponType.PAPER, computerChoice);
-                Log.d("Game", "I did it mom!");
                 answerText.setText(result);
 
             }
@@ -53,6 +56,26 @@ public class Game extends AppCompatActivity {
                 RockPaperScissors game = new RockPaperScissors();
                 WeaponType computerChoice = game.computerChoice();
                 String result = game.compareWeapons(WeaponType.SCISSORS, computerChoice);
+                answerText.setText(result);
+
+            }
+        });
+
+        LizardButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view){
+                RockPaperScissors game = new RockPaperScissors();
+                WeaponType computerChoice = game.computerChoice();
+                String result = game.compareWeapons(WeaponType.LIZARD, computerChoice);
+                answerText.setText(result);
+
+            }
+        });
+
+        SpockButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view){
+                RockPaperScissors game = new RockPaperScissors();
+                WeaponType computerChoice = game.computerChoice();
+                String result = game.compareWeapons(WeaponType.SPOCK, computerChoice);
                 answerText.setText(result);
 
             }

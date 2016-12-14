@@ -6,20 +6,42 @@
     <Button
         android:id="@+id/button_rock"
         android:text="Rock"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_gravity="center"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:background="@drawable/stone_png13592"/>
 
     <Button
         android:id="@+id/button_paper"
         android:text="Paper"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_gravity="center"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:background="@drawable/paper"/>
 
     <Button
         android:id="@+id/button_scissors"
         android:text="Scissors"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_gravity="center"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:background="@drawable/scissors"/>
+
+    <Button
+        android:id="@+id/button_lizard"
+        android:text="Lizard"
+        android:layout_gravity="center"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:background="@drawable/lizard"/>
+
+    <Button
+        android:id="@+id/button_spock"
+        android:text="Spock"
+        android:layout_gravity="center"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:background="@drawable/spock"/>
 
     <TextView
         android:id="@+id/answer_text"
@@ -28,5 +50,6 @@
         android:text=""
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
 
 </LinearLayout>

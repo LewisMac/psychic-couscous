@@ -15,10 +15,19 @@ public class RockPaperScissors {
             switch(input) {
                 case 1:
                     weaponChosen = WeaponType.ROCK;
+                    break;
                 case 2:
                     weaponChosen = WeaponType.PAPER;
+                    break;
                 case 3:
                     weaponChosen = WeaponType.SCISSORS;
+                    break;
+                case 4:
+                    weaponChosen = WeaponType.LIZARD;
+                    break;
+                case 5:
+                    weaponChosen = WeaponType.SPOCK;
+                    break;
             }
         return weaponChosen;
     }
@@ -52,6 +61,12 @@ public class RockPaperScissors {
             case SCISSORS:
                 result = playerChoiceScissors(computerChoice);
                 break;
+            case LIZARD:
+                result = playerChoiceLizard(computerChoice);
+                break;
+            case SPOCK:
+                result = playerChoiceSpock(computerChoice);
+                break;
         }
         return result;
     }
@@ -69,6 +84,13 @@ public class RockPaperScissors {
             case SCISSORS:
                 result = "Rock crushes Scissors, you Lose!";
                 break;
+            case LIZARD:
+                result = "Rock crushes Lizard, you Win!";
+                break;
+            case SPOCK:
+                result = "Spock vapourises Rock, you Lose!";
+                break;
+
         }
         return result;
     }
@@ -85,6 +107,12 @@ public class RockPaperScissors {
                 break;
             case ROCK:
                 result = "Paper covers Rock, you Win!";
+                break;
+            case LIZARD:
+                result = "Lizard eats Paper, you Lose!";
+                break;
+            case SPOCK:
+                result = "Paper disproves Spock, you Win!";
                 break;
         }
 
@@ -103,6 +131,60 @@ public class RockPaperScissors {
                 break;
             case ROCK:
                 result = "Rock crushes Scissors, you Lose!";
+                break;
+            case LIZARD:
+                result = "Scissors decapitates Lizard, you Win!";
+                break;
+            case SPOCK:
+                result = "Spock smashes Scissors, you Lose!";
+                break;
+        }
+
+        return result;
+    }
+
+    public String playerChoiceLizard(WeaponType computerChoice){
+        String result = null;
+
+        switch(computerChoice) {
+            case SCISSORS:
+                result = "Scissors decapitates Lizard, you Lose!";
+                break;
+            case PAPER:
+                result = "Lizard eats Paper, you Win!";
+                break;
+            case ROCK:
+                result = "Rock crushes Lizard, you Lose!";
+                break;
+            case LIZARD:
+                result = "Draw";
+                break;
+            case SPOCK:
+                result = "Lizard poisons Spock, you Win!";
+                break;
+        }
+
+        return result;
+    }
+
+    public String playerChoiceSpock(WeaponType computerChoice){
+        String result = null;
+
+        switch(computerChoice) {
+            case SCISSORS:
+                result = "Spock smashes Scissors, you Win!";
+                break;
+            case PAPER:
+                result = "Paper disproves Spock, you Lose!";
+                break;
+            case ROCK:
+                result = "Spock vapourises Rock, you Win!";
+                break;
+            case LIZARD:
+                result = "Lizard poisons Spock, you Lose!";
+                break;
+            case SPOCK:
+                result = "Draw";
                 break;
         }
 
